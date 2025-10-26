@@ -1,9 +1,9 @@
 # Claude Code Marketplace
 
-커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **6개 플러그인 제공**
+커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **7개 플러그인 제공**
 
-[![Version](https://img.shields.io/badge/version-1.2.1-blue)](https://github.com/devlikebear/claude-code-marketplace)
-[![Plugins](https://img.shields.io/badge/plugins-6-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
+[![Version](https://img.shields.io/badge/version-1.3.0-blue)](https://github.com/devlikebear/claude-code-marketplace)
+[![Plugins](https://img.shields.io/badge/plugins-7-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
 ## 📦 포함된 플러그인
@@ -107,6 +107,21 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 - 프로젝트 구조 학습
 - 재사용 가능한 Skills 생성
 
+### 7. `/manual` - 웹서비스 사용자 매뉴얼 자동 생성 ⭐ NEW
+
+웹서비스를 자동으로 탐색하여 사용자 가이드(매뉴얼) 문서를 마크다운으로 생성하는 플러그인입니다.
+
+**버전**: 1.0.0
+**타입**: Command
+**주요 기능:**
+- **Playwright MCP**: 웹사이트 자동 탐색 및 스크린샷 캡처
+- **Sequential Thinking MCP**: 페이지 기능 지능적 분석
+- 마크다운 형식의 사용자 가이드 생성
+- 기존 매뉴얼 선택적 업데이트
+- 탐색 깊이 및 페이지 수 제한
+
+**상세 문서**: [plugins/manual-generator-plugin/README.md](plugins/manual-generator-plugin/README.md)
+
 ## 🚀 설치 방법
 
 ### 마켓플레이스 추가
@@ -127,6 +142,7 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 /plugin install quality-guardian@claude-code-marketplace
 /plugin install novel-writer@claude-code-marketplace
 /plugin install skill-generator@claude-code-marketplace
+/plugin install manual-generator@claude-code-marketplace
 ```
 
 ## 📖 사용 방법
@@ -197,6 +213,24 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 ```
 
 **상세 사용법**: [plugins/novel-writer-plugin/README.md](plugins/novel-writer-plugin/README.md)
+
+### `/manual` 사용 예시
+
+```bash
+# 전체 사이트 매뉴얼 생성
+/manual --url https://example.com --depth 2 --max-pages 20 --output user-guide.md
+
+# 특정 페이지만 업데이트
+/manual --url https://example.com/dashboard --update existing-manual.md
+
+# 빠른 가이드 생성 (depth 1, 최대 10페이지)
+/manual --url https://example.com --depth 1 --max-pages 10 --output quick-guide.md
+
+# 특정 경로만 포함
+/manual --url https://example.com --include-pattern "/docs/*,/help/*" --output docs-guide.md
+```
+
+**상세 사용법**: [plugins/manual-generator-plugin/README.md](plugins/manual-generator-plugin/README.md)
 
 ## 🛠️ 개발 가이드
 
