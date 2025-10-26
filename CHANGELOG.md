@@ -5,6 +5,69 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2024-10-26
+
+### Added
+
+#### manual-generator Plugin (v1.0.0) ⭐ NEW
+
+**웹서비스 사용자 매뉴얼 자동 생성 플러그인**
+
+웹서비스를 자동으로 탐색하고 분석하여 사용자 가이드(매뉴얼) 문서를 마크다운 형식으로 생성하는 새로운 플러그인입니다.
+
+**주요 기능:**
+- ✨ **Playwright MCP 통합**: 웹사이트 자동 탐색 및 브라우저 제어
+- 🧠 **Sequential Thinking MCP 활용**: 페이지 기능 지능적 분석
+- 📸 **스크린샷 자동 생성**: 각 페이지의 스크린샷 캡처 및 삽입
+- 📝 **마크다운 문서 생성**: 구조화되고 읽기 쉬운 사용자 가이드 생성
+- 🔄 **선택적 업데이트**: 기존 매뉴얼의 특정 페이지만 갱신 가능
+- 🎯 **탐색 깊이 조절**: 메인 페이지만, 2단계 깊이, 전체 사이트 등 선택 가능
+
+**사용 예시:**
+```bash
+# 전체 사이트 매뉴얼 생성
+/manual --url https://example.com --depth 2 --max-pages 20 --output user-guide.md
+
+# 특정 페이지만 업데이트
+/manual --url https://example.com/dashboard --update existing-manual.md
+
+# 특정 경로만 포함
+/manual --url https://example.com --include-pattern "/docs/*,/help/*"
+```
+
+**주요 워크플로우:**
+1. URL 입력 및 브라우저 실행
+2. 메인 페이지 분석 (Sequential Thinking)
+3. 링크 수집 및 필터링 (depth, max-pages)
+4. 각 페이지 처리:
+   - 페이지 로드 및 스냅샷
+   - Sequential Thinking으로 기능 분석
+   - 스크린샷 캡처
+   - 설명 생성
+5. 마크다운 문서 조합 및 저장
+
+**지원 기능:**
+- 외부 링크 필터링
+- 중복 페이지 제거
+- 에러 처리 및 복구
+- 페이지 로드 타임아웃 설정
+- 뷰포트 크기 조절
+- 헤드리스/헤드풀 모드 선택
+
+**문서:**
+- 플러그인 README: [plugins/manual-generator-plugin/README.md](plugins/manual-generator-plugin/README.md)
+- 커맨드 가이드: [plugins/manual-generator-plugin/commands/manual.md](plugins/manual-generator-plugin/commands/manual.md)
+
+### Changed
+
+- 마켓플레이스 버전: 1.2.1 → 1.3.0
+- 플러그인 총 개수: 6개 → 7개
+- plugin.json, marketplace.json 업데이트
+- README.md 플러그인 목록 및 사용 예시 추가
+- 키워드 추가: manual-generation, user-guide, web-scraping
+
+---
+
 ## [1.2.1] - 2024-10-19
 
 ### Added
