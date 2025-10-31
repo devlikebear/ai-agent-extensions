@@ -1,0 +1,20 @@
+{
+  "name": "claude-agent-app-builder",
+  "version": "1.0.0",
+  "description": "Claude Agent SDK를 사용해 웹 애플리케이션을 구축하는 전문가 스킬",
+  "author": {
+    "name": "Claude Code Marketplace",
+    "url": "https://github.com/devlikebear/claude-code-marketplace"
+  },
+  "keywords": [
+    "claude",
+    "agent",
+    "sdk",
+    "typescript",
+    "python",
+    "mcp",
+    "tools",
+    "automation"
+  ],
+  "license": "MIT"
+}
