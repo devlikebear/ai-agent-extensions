@@ -5,6 +5,83 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2024-10-26
+
+### Added
+
+#### plugin-generator Plugin (v1.0.0) ⭐ NEW
+
+**Claude Code 플러그인 자동 생성 도구**
+
+Claude Code 플러그인을 자동으로 생성하는 전문 플러그인입니다. Command, Sub-agent, Skill, Hook 설정, Plugin manifest 등을 템플릿 기반으로 생성합니다.
+
+**주요 기능:**
+- ✨ **Command 자동 생성**: Frontmatter와 템플릿 자동 생성
+- 🤖 **Sub-agent 자동 생성**: name, description, tools, model 설정 포함
+- 🎯 **Skill 자동 생성**: SKILL.md 및 지원 파일 구조 생성
+- 🪝 **Hook 설정 생성**: hooks.json 자동 생성 및 업데이트
+- 📦 **Plugin manifest 생성**: plugin.json 자동 생성
+- 🏪 **Marketplace manifest 생성**: marketplace.json 자동 생성
+- 📁 **전체 플러그인 프로젝트**: 완전한 디렉토리 구조 자동 생성
+- ✅ **유효성 검증**: 생성된 파일의 형식 및 구조 자동 검증
+
+**생성 가능한 타입:**
+1. **Command**: commands/ 디렉토리에 .md 파일 생성 (kebab-case)
+2. **Sub-agent**: agents/ 디렉토리에 .md 파일 생성 (name, description, tools, model)
+3. **Skill**: skills/{skill-name}/ 디렉토리에 SKILL.md 생성 (lowercase, max 64자)
+4. **Hook**: hooks/hooks.json 생성 및 업데이트 (9개 이벤트 타입)
+5. **Plugin Manifest**: .claude-plugin/plugin.json 생성 (semantic versioning)
+6. **Marketplace Manifest**: .claude-plugin/marketplace.json 생성
+7. **전체 플러그인 프로젝트**: 완전한 디렉토리 구조 생성
+
+**사용 예시:**
+```bash
+# 대화형 모드
+/plugin-generator
+
+# 타입 지정 모드
+/plugin-generator --type command
+/plugin-generator --type agent
+/plugin-generator --type skill
+/plugin-generator --type hook
+/plugin-generator --type manifest
+/plugin-generator --type marketplace
+/plugin-generator --type plugin
+
+# 빠른 생성 (옵션 지정)
+/plugin-generator --type command --name deploy-app --description "Deploy application to production"
+/plugin-generator --type agent --name code-reviewer --tools "Read,Grep,Edit" --model sonnet
+/plugin-generator --type skill --name pdf-extractor --description "Extract PDF text. Use for PDF processing."
+```
+
+**유효성 검증:**
+- **이름 규칙**: kebab-case (Command, Agent), lowercase (Skill, max 64자)
+- **버전 형식**: Semantic versioning (MAJOR.MINOR.PATCH)
+- **Frontmatter 필드**: 필수 필드 검증 (name, description)
+- **디렉토리 구조**: 표준 레이아웃 검증 (commands/, agents/, skills/)
+
+**템플릿 구조:**
+- Command Template: Frontmatter + 시스템 프롬프트
+- Sub-agent Template: Frontmatter (tools, model 포함) + 시스템 프롬프트
+- Skill Template: Frontmatter (allowed-tools) + instructions
+- Hook Template: 9개 이벤트 타입 구조
+- Plugin Manifest Template: 메타데이터 및 설정
+- Marketplace Manifest Template: 플러그인 목록 및 카테고리
+
+**문서:**
+- 플러그인 README: [plugins/plugin-generator-plugin/README.md](plugins/plugin-generator-plugin/README.md)
+- 커맨드 가이드: [plugins/plugin-generator-plugin/commands/plugin-generator.md](plugins/plugin-generator-plugin/commands/plugin-generator.md)
+
+### Changed
+
+- 마켓플레이스 버전: 1.3.0 → 1.4.0
+- 플러그인 총 개수: 7개 → 8개
+- plugin.json, marketplace.json 업데이트
+- README.md 플러그인 목록 및 사용 예시 추가
+- 키워드 추가: plugin-generation, automation
+
+---
+
 ## [1.3.0] - 2024-10-26
 
 ### Added

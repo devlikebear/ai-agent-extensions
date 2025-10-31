@@ -24,3 +24,7 @@ build/
 
 # Claude Code
 plugins/**/.claude-plugin/
+
+# AI Generated Files
+WORK*.md
+*PLAN*.md
