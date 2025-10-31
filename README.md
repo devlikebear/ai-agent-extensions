@@ -1,9 +1,9 @@
 # Claude Code Marketplace
 
-커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **7개 플러그인 제공**
+커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **8개 플러그인 제공**
 
-[![Version](https://img.shields.io/badge/version-1.3.0-blue)](https://github.com/devlikebear/claude-code-marketplace)
-[![Plugins](https://img.shields.io/badge/plugins-7-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
+[![Version](https://img.shields.io/badge/version-1.4.0-blue)](https://github.com/devlikebear/claude-code-marketplace)
+[![Plugins](https://img.shields.io/badge/plugins-8-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
 ## 📦 포함된 플러그인
@@ -143,6 +143,7 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 /plugin install novel-writer@claude-code-marketplace
 /plugin install skill-generator@claude-code-marketplace
 /plugin install manual-generator@claude-code-marketplace
+/plugin install plugin-generator@claude-code-marketplace
 ```
 
 ## 📖 사용 방법
@@ -231,6 +232,59 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 ```
 
 **상세 사용법**: [plugins/manual-generator-plugin/README.md](plugins/manual-generator-plugin/README.md)
+
+### 8. `/plugin-generator` - Claude Code 플러그인 자동 생성 ⭐ NEW
+
+Claude Code 플러그인을 자동으로 생성하는 도구입니다. Command, Sub-agent, Skill, Hook 설정, Plugin manifest 등을 템플릿 기반으로 생성합니다.
+
+**버전**: 1.0.0
+**타입**: Command
+**주요 기능:**
+- ✨ **Command 자동 생성**: Frontmatter와 템플릿 자동 생성
+- 🤖 **Sub-agent 자동 생성**: name, description, tools, model 설정 포함
+- 🎯 **Skill 자동 생성**: SKILL.md 및 지원 파일 구조 생성
+- 🪝 **Hook 설정 생성**: hooks.json 자동 생성 및 업데이트
+- 📦 **Plugin manifest 생성**: plugin.json 자동 생성
+- 🏪 **Marketplace manifest 생성**: marketplace.json 자동 생성
+- 📁 **전체 플러그인 프로젝트**: 완전한 디렉토리 구조 자동 생성
+- ✅ **유효성 검증**: 생성된 파일의 형식 및 구조 자동 검증
+
+**상세 문서**: [plugins/plugin-generator-plugin/README.md](plugins/plugin-generator-plugin/README.md)
+
+### `/plugin-generator` 사용 예시
+
+```bash
+# 대화형 모드 (권장)
+/plugin-generator
+
+# Command 생성
+/plugin-generator --type command
+
+# Sub-agent 생성
+/plugin-generator --type agent
+
+# Skill 생성
+/plugin-generator --type skill
+
+# Hook 설정 생성
+/plugin-generator --type hook
+
+# Plugin manifest 생성
+/plugin-generator --type manifest
+
+# Marketplace manifest 생성
+/plugin-generator --type marketplace
+
+# 전체 플러그인 프로젝트 생성
+/plugin-generator --type plugin
+
+# 빠른 생성 (옵션 지정)
+/plugin-generator --type command --name deploy-app --description "Deploy application to production"
+/plugin-generator --type agent --name code-reviewer --tools "Read,Grep,Edit" --model sonnet
+/plugin-generator --type skill --name pdf-extractor --description "Extract PDF text. Use for PDF processing."
+```
+
+**상세 사용법**: [plugins/plugin-generator-plugin/README.md](plugins/plugin-generator-plugin/README.md)
 
 ## 🛠️ 개발 가이드
 

@@ -1,6 +1,6 @@
 {
   "name": "claude-code-marketplace",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "owner": {
     "name": "devlikebear",
     "url": "https://github.com/devlikebear"
@@ -102,6 +102,20 @@
         "playwright",
         "mcp",
         "automation"
+      ]
+    },
+    {
+      "name": "plugin-generator",
+      "source": "./plugins/plugin-generator-plugin",
+      "version": "1.0.0",
+      "description": "Claude Code 플러그인을 자동으로 생성하는 도구 - Command, Sub-agent, Skill, Hook, Plugin manifest 등을 템플릿 기반으로 생성",
+      "category": "development",
+      "tags": [
+        "plugin-generation",
+        "automation",
+        "templates",
+        "development",
+        "tools"
       ]
     }
   ],
