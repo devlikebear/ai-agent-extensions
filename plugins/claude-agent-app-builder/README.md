@@ -25,7 +25,41 @@ Claude Agent SDK의 핵심 패턴과 베스트 프랙티스를 제공합니다.
 - 컨텍스트 압축 최적화
 - 에러 처리 및 복구 전략
 
-### 2. 프로젝트 템플릿
+### 2. Command: /claude-agent
+
+Agent 애플리케이션 개발 워크플로우를 제공하는 Command입니다.
+
+**사용 가능한 작업:**
+- `init` - 프로젝트 초기화 (TypeScript/Python)
+- `tool` - 커스텀 Tool 생성
+- `agent` - Agent 구현 및 설정
+- `mcp` - MCP Server 통합
+- `permission` - Permission 모드 구성
+- `deploy` - 빌드 및 배포
+
+**예시:**
+```bash
+/claude-agent init --lang typescript --name weather-agent
+/claude-agent tool --name weather --description "Get weather info"
+/claude-agent deploy --mode production
+```
+
+### 3. Sub-agent: agent-developer
+
+Claude Agent SDK를 사용하여 실제 코드를 생성하고 구현하는 전문가 Sub-agent입니다.
+
+**전문 분야:**
+- TypeScript/Python Agent 구현
+- Custom Tool 설계 및 개발
+- MCP Server 통합
+- Permission 모드 구성
+- Error handling 및 복원력
+- 프로덕션 배포 최적화
+
+**자동 활성화:**
+`/claude-agent` Command 실행 시 자동으로 활성화되어 SDK 베스트 프랙티스를 적용합니다.
+
+### 4. 프로젝트 템플릿
 
 즉시 사용 가능한 프로젝트 템플릿을 제공합니다.
 
@@ -65,8 +99,45 @@ cd /path/to/claude-code-marketplace/plugins/claude-agent-app-builder
 
 ## 사용 방법
 
-### 1. Python Agent 프로젝트 생성
+### 1. Command를 사용한 프로젝트 생성
 
+#### TypeScript 프로젝트
+```bash
+# 프로젝트 초기화
+/claude-agent init --lang typescript --name my-weather-agent
+
+# Weather Tool 생성
+/claude-agent tool --name weather --description "Get weather information"
+
+# Agent 구현
+/claude-agent agent --system-prompt "You are a weather assistant" --tools weather
+
+# 개발 모드 실행
+/claude-agent deploy --mode dev
+```
+
+#### Python 프로젝트
+```bash
+# 프로젝트 초기화
+/claude-agent init --lang python --name data-agent --template mcp-server
+
+# Multiple Tools 생성
+/claude-agent tool --name fetch-data --description "Fetch data from API"
+/claude-agent tool --name analyze-data --description "Analyze data"
+
+# MCP Server 설정
+/claude-agent mcp --server data-tools --tools fetch-data,analyze-data
+
+# Permission 설정
+/claude-agent permission --mode acceptEdits
+
+# 프로덕션 배포
+/claude-agent deploy --mode production
+```
+
+### 2. 자연어 프롬프트 사용
+
+#### Python Agent 프로젝트 생성
 ```
 프롬프트: "Claude Agent SDK를 사용하여 Python Agent 프로젝트를 생성해줘"
 
@@ -77,8 +148,7 @@ Claude Code가 자동으로:
 4. 커스텀 Tool 예시 추가
 ```
 
-### 2. TypeScript Agent 프로젝트 생성
-
+#### TypeScript Agent 프로젝트 생성
 ```
 프롬프트: "Claude Agent SDK로 TypeScript Agent를 만들어줘"
 
@@ -89,16 +159,27 @@ Claude Code가 자동으로:
 4. Zod를 사용한 Tool 예시 추가
 ```
 
-### 3. 커스텀 Tool 생성
+### 3. 커스텀 Tool 개발
 
+#### Command 사용
+```bash
+# TypeScript Tool with Zod
+/claude-agent tool --name weather --description "Get weather for a city"
+
+# Python Tool with JSON schema
+/claude-agent tool --name database --description "Query database" --schema schema.json
+```
+
+#### 자연어 프롬프트
 ```
 프롬프트: "날씨 정보를 가져오는 MCP Tool을 만들어줘"
 
-Claude Code가 자동으로:
-1. Tool 스키마 정의
+agent-developer Sub-agent가 자동으로:
+1. Tool 스키마 정의 (Zod 또는 JSON schema)
 2. Tool 구현 코드 생성
-3. MCP 서버 설정
-4. Agent 통합 코드 제공
+3. Error handling 추가
+4. MCP 서버 설정
+5. Agent 통합 코드 제공
 ```
 
 ### 4. 베스트 프랙티스 조회
@@ -106,11 +187,11 @@ Claude Code가 자동으로:
 ```
 프롬프트: "Claude Agent SDK의 권한 관리 패턴을 알려줘"
 
-Skill이 제공:
+agent-sdk-patterns Skill이 제공:
 - Permission Mode 설명 (default, acceptEdits, plan, bypassPermissions)
 - 각 모드의 사용 사례
 - 보안 가이드라인
-- 커스텀 권한 콜백 예시
+- 프로덕션 배포 체크리스트
 ```
 
 ## SDK 패턴 예시
@@ -183,9 +264,13 @@ const server = createSdkMcpServer({
 claude-agent-app-builder/
 ├── .claude-plugin/
 │   └── plugin.json              # 플러그인 메타데이터
+├── commands/
+│   └── claude-agent.md          # Agent 개발 워크플로우 Command
+├── agents/
+│   └── agent-developer.md       # SDK 전문가 Sub-agent
 ├── skills/
 │   └── agent-sdk-patterns/
-│       └── SKILL.md             # SDK 패턴 및 베스트 프랙티스
+│       └── SKILL.md             # SDK 패턴 및 베스트 프랙티스 (4,200+ 라인)
 ├── templates/
 │   ├── python/
 │   │   ├── pyproject.toml       # Python 프로젝트 설정
@@ -375,11 +460,15 @@ MIT License
 
 ## 변경 로그
 
-### v1.0.0 (2024-10-31)
+### v1.0.0 (2025-01-01)
 - 초기 릴리스
+- **Command**: `/claude-agent` - Agent 개발 워크플로우 (init, tool, agent, mcp, deploy)
+- **Sub-agent**: `agent-developer` - SDK 전문가 자동 활성화
+- **Skill**: `agent-sdk-patterns` - SDK 패턴 및 베스트 프랙티스 (4,200+ 라인)
 - TypeScript 및 Python 프로젝트 템플릿
-- SDK 패턴 및 베스트 프랙티스 Skill
-- 커스텀 Tool 생성 예시
+- 커스텀 Tool 생성 가이드
+- MCP Server 통합 패턴
+- Permission 모드 구성
 - 프로덕션 배포 가이드
 
 ---
