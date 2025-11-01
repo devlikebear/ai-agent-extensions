@@ -1,7 +1,7 @@
 {
   "name": "claude-code-marketplace",
-  "version": "1.4.0",
-  "description": "커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - 8개 플러그인 제공",
+  "version": "1.5.0",
+  "description": "커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - 9개 플러그인 제공",
   "author": {
     "name": "devlikebear@gmail.com",
     "url": "https://github.com/devlikebear"
@@ -24,6 +24,11 @@
     "user-guide",
     "web-scraping",
     "plugin-generation",
-    "automation"
+    "automation",
+    "claude-agent-sdk",
+    "sdk",
+    "typescript",
+    "python",
+    "mcp"
   ]
 }

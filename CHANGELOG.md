@@ -5,6 +5,83 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2024-10-31
+
+### Added
+
+#### claude-agent-app-builder Plugin (v1.0.0) ⭐ NEW
+
+**Claude Agent SDK 개발 도우미 Skill**
+
+Claude Agent SDK를 사용하여 Python과 TypeScript 기반 Agent 애플리케이션을 빠르고 안전하게 구축하는 전문가 스킬입니다.
+
+**주요 기능:**
+- 📚 **SDK 패턴 라이브러리**: 검증된 TypeScript 및 Python 패턴 제공
+- 🎯 **프로젝트 템플릿**: 즉시 사용 가능한 프로젝트 구조
+- 🔧 **커스텀 Tool 생성**: MCP Tool 개발 가이드 및 예시 코드
+- 🛡️ **권한 관리**: Permission Modes 및 보안 설정 가이드
+- 🚀 **프로덕션 배포**: 실전 배포 및 최적화 가이드
+- 📖 **마이그레이션 지원**: Claude Code SDK → Claude Agent SDK
+
+**제공 패턴:**
+
+TypeScript:
+- `query()` - 간단한 일회성 작업
+- `ClaudeSDKClient` - 대화형 멀티턴 세션
+- `tool()` with Zod - 타입 안전한 Tool 생성
+- `createSdkMcpServer()` - MCP 서버 생성
+
+Python:
+- `query()` - 간단한 일회성 작업
+- `ClaudeSDKClient` - 대화형 멀티턴 세션
+- `@tool` decorator - Tool 생성
+- `create_sdk_mcp_server()` - MCP 서버 생성
+
+**Permission Modes:**
+- `default`: 모든 도구 사용 시 확인 필요 (가장 안전)
+- `acceptEdits`: 파일 수정 자동 승인 (자동화 워크플로우)
+- `plan`: 계획만 수립, 실행 안 함 (미리보기)
+- `bypassPermissions`: 모든 권한 자동 승인 (테스트 전용, 위험)
+
+**프로젝트 템플릿:**
+
+Python 템플릿:
+- `pyproject.toml` - 프로젝트 설정 및 의존성
+- `agent.py` - 기본 Agent 구현 예시
+- `custom_tool.py` - 커스텀 Tool 생성 예시 (날씨, 계산기)
+
+TypeScript 템플릿:
+- `package.json` - 프로젝트 설정 및 의존성
+- `tsconfig.json` - TypeScript 컴파일 설정
+- `agent.ts` - 기본 Agent 구현 예시
+- `custom-tool.ts` - Zod를 사용한 커스텀 Tool 예시
+
+**베스트 프랙티스:**
+- 에러 처리 (CLINotFoundError, ProcessError)
+- 리소스 정리 (async context manager)
+- 보안 설정 (도구 권한 제한)
+- 프로덕션 배포 (환경 변수, Docker)
+
+**참고 문서:**
+- Claude Agent SDK Overview
+- TypeScript SDK Reference
+- Python SDK Reference
+- Migration Guide (Claude Code SDK → Claude Agent SDK)
+
+**문서:**
+- 플러그인 README: [plugins/claude-agent-app-builder/README.md](plugins/claude-agent-app-builder/README.md)
+- Skill 가이드: [plugins/claude-agent-app-builder/skills/agent-sdk-patterns/SKILL.md](plugins/claude-agent-app-builder/skills/agent-sdk-patterns/SKILL.md)
+
+### Changed
+
+- 마켓플레이스 버전: 1.4.0 → 1.5.0
+- 플러그인 총 개수: 8개 → 9개
+- plugin.json, marketplace.json 업데이트
+- README.md 플러그인 목록 및 사용 예시 추가
+- 키워드 추가: agent, sdk, typescript, python, mcp
+
+---
+
 ## [1.4.0] - 2024-10-26
 
 ### Added
