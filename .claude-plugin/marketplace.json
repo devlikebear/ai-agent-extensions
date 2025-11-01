@@ -1,6 +1,6 @@
 {
   "name": "claude-code-marketplace",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "owner": {
     "name": "devlikebear",
     "url": "https://github.com/devlikebear"
@@ -116,6 +116,23 @@
         "templates",
         "development",
         "tools"
+      ]
+    },
+    {
+      "name": "claude-agent-app-builder",
+      "source": "./plugins/claude-agent-app-builder",
+      "version": "1.0.0",
+      "description": "Claude Agent SDK를 사용해 Python과 TypeScript Agent 애플리케이션을 구축하는 전문가 스킬 - SDK 패턴, 프로젝트 템플릿, 커스텀 Tool 생성 가이드",
+      "category": "development",
+      "tags": [
+        "claude",
+        "agent",
+        "sdk",
+        "typescript",
+        "python",
+        "mcp",
+        "tools",
+        "automation"
       ]
     }
   ],

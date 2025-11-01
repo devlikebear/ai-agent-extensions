@@ -1,9 +1,9 @@
 # Claude Code Marketplace
 
-커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **8개 플러그인 제공**
+커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **9개 플러그인 제공**
 
-[![Version](https://img.shields.io/badge/version-1.4.0-blue)](https://github.com/devlikebear/claude-code-marketplace)
-[![Plugins](https://img.shields.io/badge/plugins-8-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue)](https://github.com/devlikebear/claude-code-marketplace)
+[![Plugins](https://img.shields.io/badge/plugins-9-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
 ## 📦 포함된 플러그인
@@ -144,6 +144,7 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 /plugin install skill-generator@claude-code-marketplace
 /plugin install manual-generator@claude-code-marketplace
 /plugin install plugin-generator@claude-code-marketplace
+/plugin install claude-agent-app-builder@claude-code-marketplace
 ```
 
 ## 📖 사용 방법
@@ -233,7 +234,7 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 
 **상세 사용법**: [plugins/manual-generator-plugin/README.md](plugins/manual-generator-plugin/README.md)
 
-### 8. `/plugin-generator` - Claude Code 플러그인 자동 생성 ⭐ NEW
+### 8. `/plugin-generator` - Claude Code 플러그인 자동 생성
 
 Claude Code 플러그인을 자동으로 생성하는 도구입니다. Command, Sub-agent, Skill, Hook 설정, Plugin manifest 등을 템플릿 기반으로 생성합니다.
 
@@ -250,6 +251,32 @@ Claude Code 플러그인을 자동으로 생성하는 도구입니다. Command, 
 - ✅ **유효성 검증**: 생성된 파일의 형식 및 구조 자동 검증
 
 **상세 문서**: [plugins/plugin-generator-plugin/README.md](plugins/plugin-generator-plugin/README.md)
+
+### 9. `claude-agent-app-builder` - Claude Agent SDK 개발 도우미 ⭐ NEW
+
+Claude Agent SDK를 사용하여 Python과 TypeScript 기반 Agent 애플리케이션을 빠르고 안전하게 구축하는 전문가 스킬입니다.
+
+**버전**: 1.0.0
+**타입**: Skill
+**주요 기능:**
+- 📚 **SDK 패턴 라이브러리**: TypeScript 및 Python 검증된 패턴 제공
+- 🎯 **프로젝트 템플릿**: 즉시 사용 가능한 프로젝트 구조
+- 🔧 **커스텀 Tool 생성**: MCP Tool 개발 가이드 및 예시
+- 🛡️ **권한 관리**: Permission Modes 및 보안 설정
+- 🚀 **프로덕션 배포**: 실전 배포 및 최적화 가이드
+- 📖 **마이그레이션 지원**: Claude Code SDK → Claude Agent SDK
+
+**포함 패턴:**
+- TypeScript: `query()`, `ClaudeSDKClient`, `tool()`, `createSdkMcpServer()`
+- Python: `query()`, `ClaudeSDKClient`, `@tool`, `create_sdk_mcp_server()`
+- Permission Modes: default, acceptEdits, plan, bypassPermissions
+- MCP 서버 통합 및 Hook 관리
+
+**프로젝트 템플릿:**
+- Python: pyproject.toml, agent.py, custom_tool.py
+- TypeScript: package.json, tsconfig.json, agent.ts, custom-tool.ts
+
+**상세 문서**: [plugins/claude-agent-app-builder/README.md](plugins/claude-agent-app-builder/README.md)
 
 ### `/plugin-generator` 사용 예시
 
@@ -285,6 +312,52 @@ Claude Code 플러그인을 자동으로 생성하는 도구입니다. Command, 
 ```
 
 **상세 사용법**: [plugins/plugin-generator-plugin/README.md](plugins/plugin-generator-plugin/README.md)
+
+### `claude-agent-app-builder` 사용 예시
+
+**Python Agent 프로젝트 생성:**
+```
+프롬프트: "Claude Agent SDK를 사용하여 Python Agent 프로젝트를 생성해줘"
+
+자동 생성:
+- pyproject.toml 설정
+- agent.py (기본 구현)
+- custom_tool.py (Tool 예시)
+```
+
+**TypeScript Agent 프로젝트 생성:**
+```
+프롬프트: "Claude Agent SDK로 TypeScript Agent를 만들어줘"
+
+자동 생성:
+- package.json, tsconfig.json
+- agent.ts (기본 구현)
+- custom-tool.ts (Zod Tool 예시)
+```
+
+**커스텀 Tool 생성:**
+```
+프롬프트: "날씨 정보를 가져오는 MCP Tool을 만들어줘"
+
+제공 내용:
+- Tool 스키마 정의
+- Tool 구현 코드
+- MCP 서버 설정
+- Agent 통합 코드
+```
+
+**베스트 프랙티스 조회:**
+```
+프롬프트: "Claude Agent SDK의 권한 관리 패턴을 알려줘"
+
+제공 내용:
+- Permission Mode 설명
+- 각 모드의 사용 사례
+- 보안 가이드라인
+- 커스텀 권한 콜백 예시
+```
+
+**상세 사용법**: [plugins/claude-agent-app-builder/README.md](plugins/claude-agent-app-builder/README.md)
 
 ## 🛠️ 개발 가이드
 
