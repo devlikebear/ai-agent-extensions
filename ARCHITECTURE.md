@@ -1,6 +1,6 @@
-# Claude Code Marketplace Architecture
+# AI Agent Extensions Architecture
 
-확장 가능하고 모듈화된 플러그인 마켓플레이스 구조
+확장 가능하고 모듈화된 AI Agent 확장 기능 구조
 
 ## 설계 원칙
 
@@ -15,10 +15,10 @@
 ### 마켓플레이스 루트
 
 ```
-claude-code-marketplace/
+ai-agent-extensions/
 ├── .claude-plugin/
-│   ├── marketplace.json      # 마켓플레이스 메타데이터
-│   └── plugin.json           # 마켓플레이스 자체 설정
+│   ├── marketplace.json      # 확장 기능 메타데이터
+│   └── plugin.json           # 확장 기능 자체 설정
 │
 ├── plugins/                  # 모든 플러그인 저장소
 │   ├── novel-writer/
@@ -145,9 +145,9 @@ plugins/[plugin-name]/
 
 ```json
 {
-  "name": "claude-code-marketplace",
+  "name": "ai-agent-extensions",
   "version": "1.2.0",
-  "description": "커뮤니티 기반 Claude Code 플러그인 마켓플레이스",
+  "description": "AI Agent Extensions for Claude Code",
 
   "plugins": [
     {

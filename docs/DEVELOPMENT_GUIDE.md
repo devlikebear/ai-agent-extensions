@@ -36,10 +36,10 @@ my-plugin/
 ### 마켓플레이스 구조
 
 ```shell
-claude-code-marketplace/
+ai-agent-extensions/
 ├── .claude-plugin/
-│   ├── plugin.json          # 마켓플레이스 메타데이터
-│   └── marketplace.json     # 마켓플레이스 정의
+│   ├── plugin.json          # 확장 기능 메타데이터
+│   └── marketplace.json     # 확장 기능 정의
 ├── plugins/
 │   ├── my-command/
 │   │   ├── .claude-plugin/

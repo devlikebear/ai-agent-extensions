@@ -54,7 +54,7 @@ Novel Writer Plugin은 소설 작가들이 Claude Code를 사용하여 창작 �
 ### Claude Code에서 직접 설치
 
 ```bash
-/plugin install novel-writer@claude-code-marketplace
+/plugin install novel-writer@ai-agent-extensions
 ```
 
 ### 로컬 개발용 설치

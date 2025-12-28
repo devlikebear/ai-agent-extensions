@@ -527,7 +527,7 @@ gh auth login
 
 ## 🤝 기여
 
-버그 리포트나 기능 제안은 [GitHub Issues](https://github.com/devlikebear/claude-code-marketplace/issues)에 등록해주세요.
+버그 리포트나 기능 제안은 [GitHub Issues](https://github.com/devlikebear/ai-agent-extensions/issues)에 등록해주세요.
 
 ## 📄 라이선스
 

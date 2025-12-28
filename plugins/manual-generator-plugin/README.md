@@ -17,7 +17,7 @@ Manual Generator는 Playwright MCP와 Sequential Thinking MCP를 활용하여 �
 
 ## 설치
 
-이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/claude-code-marketplace)의 일부입니다.
+이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/ai-agent-extensions)의 일부입니다.
 
 ### 요구사항
 
@@ -303,12 +303,12 @@ Sequential Thinking MCP를 활용하여 각 페이지를 지능적으로 분석�
 
 버그 리포트, 기능 제안, Pull Request를 환영합니다!
 
-- 이슈: https://github.com/devlikebear/claude-code-marketplace/issues
-- PR: https://github.com/devlikebear/claude-code-marketplace/pulls
+- 이슈: https://github.com/devlikebear/ai-agent-extensions/issues
+- PR: https://github.com/devlikebear/ai-agent-extensions/pulls
 
 ## 라이선스
 
-이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/claude-code-marketplace)의 일부이며, 동일한 라이선스를 따릅니다.
+이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/ai-agent-extensions)의 일부이며, 동일한 라이선스를 따릅니다.
 
 ## 변경 이력
 

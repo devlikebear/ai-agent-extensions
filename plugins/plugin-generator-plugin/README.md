@@ -19,16 +19,16 @@ Plugin Generator는 Claude Code 공식 가이드라인에 맞는 플러그인 �
 
 ## 설치
 
-이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/claude-code-marketplace)의 일부입니다.
+이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/ai-agent-extensions)의 일부입니다.
 
 ### 마켓플레이스 추가 및 설치
 
 ```bash
 # 마켓플레이스 추가
-/plugin marketplace add devlikebear/claude-code-marketplace
+/plugin marketplace add devlikebear/ai-agent-extensions
 
 # 플러그인 설치
-/plugin install plugin-generator@claude-code-marketplace
+/plugin install plugin-generator@ai-agent-extensions
 ```
 
 ## 사용 방법
@@ -431,12 +431,12 @@ allowed-tools: {{SKILL_TOOLS}}
 
 버그 리포트, 기능 제안, Pull Request를 환영합니다!
 
-- 이슈: https://github.com/devlikebear/claude-code-marketplace/issues
-- PR: https://github.com/devlikebear/claude-code-marketplace/pulls
+- 이슈: https://github.com/devlikebear/ai-agent-extensions/issues
+- PR: https://github.com/devlikebear/ai-agent-extensions/pulls
 
 ## 라이선스
 
-이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/claude-code-marketplace)의 일부이며, 동일한 라이선스를 따릅니다.
+이 플러그인은 [Claude Code Marketplace](https://github.com/devlikebear/ai-agent-extensions)의 일부이며, 동일한 라이선스를 따릅니다.
 
 ## 변경 이력
 

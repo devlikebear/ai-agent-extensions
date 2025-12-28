@@ -1,9 +1,9 @@
-# Claude Code Marketplace
+# AI Agent Extensions for Claude Code
 
-커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - **9개 플러그인 제공**
+Claude Code를 위한 AI Agent 확장 기능 모음 - **9개 플러그인 및 스킬 제공**
 
-[![Version](https://img.shields.io/badge/version-1.5.0-blue)](https://github.com/devlikebear/claude-code-marketplace)
-[![Plugins](https://img.shields.io/badge/plugins-9-brightgreen)](https://github.com/devlikebear/claude-code-marketplace)
+[![Version](https://img.shields.io/badge/version-1.5.0-blue)](https://github.com/devlikebear/ai-agent-extensions)
+[![Plugins](https://img.shields.io/badge/plugins-9-brightgreen)](https://github.com/devlikebear/ai-agent-extensions)
 [![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 
 ## 📦 포함된 플러그인
@@ -126,7 +126,7 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 
 ### 마켓플레이스 추가
 ```bash
-/plugin marketplace add devlikebear/claude-code-marketplace
+/plugin marketplace add devlikebear/ai-agent-extensions
 ```
 
 ### 플러그인 설치
@@ -136,15 +136,15 @@ GitHub Flow 전체 프로세스를 체크리스트 중심으로 자동화하며,
 /plugin
 
 # 특정 플러그인 설치
-/plugin install tdd-workflow@claude-code-marketplace
-/plugin install docs@claude-code-marketplace
-/plugin install github-flow@claude-code-marketplace
-/plugin install quality-guardian@claude-code-marketplace
-/plugin install novel-writer@claude-code-marketplace
-/plugin install skill-generator@claude-code-marketplace
-/plugin install manual-generator@claude-code-marketplace
-/plugin install plugin-generator@claude-code-marketplace
-/plugin install claude-agent-app-builder@claude-code-marketplace
+/plugin install tdd-workflow@ai-agent-extensions
+/plugin install docs@ai-agent-extensions
+/plugin install github-flow@ai-agent-extensions
+/plugin install quality-guardian@ai-agent-extensions
+/plugin install novel-writer@ai-agent-extensions
+/plugin install skill-generator@ai-agent-extensions
+/plugin install manual-generator@ai-agent-extensions
+/plugin install plugin-generator@ai-agent-extensions
+/plugin install claude-agent-app-builder@ai-agent-extensions
 ```
 
 ## 📖 사용 방법
@@ -373,5 +373,5 @@ MIT License
 
 ## 📞 문의 및 지원
 
-- GitHub Issues: https://github.com/devlikebear/claude-code-marketplace/issues
-- GitHub Discussions: https://github.com/devlikebear/claude-code-marketplace/discussions
+- GitHub Issues: https://github.com/devlikebear/ai-agent-extensions/issues
+- GitHub Discussions: https://github.com/devlikebear/ai-agent-extensions/discussions

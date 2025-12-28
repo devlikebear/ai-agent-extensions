@@ -80,7 +80,7 @@ Claude Agent SDK를 사용하여 실제 코드를 생성하고 구현하는 전�
 
 ```bash
 # Marketplace 추가 (한 번만)
-/plugin marketplace add https://github.com/devlikebear/claude-code-marketplace
+/plugin marketplace add https://github.com/devlikebear/ai-agent-extensions
 
 # 플러그인 설치
 /plugin install claude-agent-app-builder
@@ -90,10 +90,10 @@ Claude Agent SDK를 사용하여 실제 코드를 생성하고 구현하는 전�
 
 ```bash
 # 플러그인 디렉토리로 이동
-cd /path/to/claude-code-marketplace/plugins/claude-agent-app-builder
+cd /path/to/ai-agent-extensions/plugins/claude-agent-app-builder
 
 # Claude Code에 추가
-/plugin marketplace add file:///path/to/claude-code-marketplace
+/plugin marketplace add file:///path/to/ai-agent-extensions
 /plugin install claude-agent-app-builder
 ```
 
@@ -456,7 +456,7 @@ MIT License
 
 ## 기여
 
-버그 리포트나 기능 제안은 [GitHub Issues](https://github.com/devlikebear/claude-code-marketplace/issues)에 등록해주세요.
+버그 리포트나 기능 제안은 [GitHub Issues](https://github.com/devlikebear/ai-agent-extensions/issues)에 등록해주세요.
 
 ## 변경 로그
 

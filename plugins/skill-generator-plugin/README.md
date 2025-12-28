@@ -31,10 +31,10 @@ Claude Skills는 Claude에게 특정 도메인이나 작업에 대한 깊이 있
 
 ```bash
 # 마켓플레이스에서 설치
-/plugin install skill-generator@claude-code-marketplace
+/plugin install skill-generator@ai-agent-extensions
 
 # 또는 개별 설치
-/plugin marketplace add devlikebear/claude-code-marketplace
+/plugin marketplace add devlikebear/ai-agent-extensions
 ```
 
 ### 기본 사용
@@ -360,9 +360,9 @@ MIT License
 
 ## 📞 지원 및 피드백
 
-- 🐛 [버그 리포트](https://github.com/devlikebear/claude-code-marketplace/issues)
-- 💬 [토론](https://github.com/devlikebear/claude-code-marketplace/discussions)
-- ⭐ [프로젝트 스타](https://github.com/devlikebear/claude-code-marketplace)
+- 🐛 [버그 리포트](https://github.com/devlikebear/ai-agent-extensions/issues)
+- 💬 [토론](https://github.com/devlikebear/ai-agent-extensions/discussions)
+- ⭐ [프로젝트 스타](https://github.com/devlikebear/ai-agent-extensions)
 
 ---
 

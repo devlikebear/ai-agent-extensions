@@ -586,7 +586,7 @@ thought: "사용자가 실수할 수 있는 부분이나
 
 ---
 
-📝 이 문서는 [Manual Generator](https://github.com/devlikebear/claude-code-marketplace) 플러그인으로 자동 생성되었습니다.
+📝 이 문서는 [Manual Generator](https://github.com/devlikebear/ai-agent-extensions) 플러그인으로 자동 생성되었습니다.
 ```
 
 ### 페이지 섹션 템플릿

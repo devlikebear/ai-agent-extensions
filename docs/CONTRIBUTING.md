@@ -1,6 +1,6 @@
 # 플러그인 제출 가이드
 
-Claude Code Marketplace에 플러그인을 제출하는 방법을 안내합니다.
+AI Agent Extensions에 플러그인을 제출하는 방법을 안내합니다.
 
 ## 📋 제출 전 체크리스트
 
@@ -20,8 +20,8 @@ Claude Code Marketplace에 플러그인을 제출하는 방법을 안내합니�
 ```bash
 # GitHub에서 Fork 버튼 클릭
 # 본인의 저장소로 Clone
-git clone https://github.com/YOUR_USERNAME/claude-code-marketplace.git
-cd claude-code-marketplace
+git clone https://github.com/YOUR_USERNAME/ai-agent-extensions.git
+cd ai-agent-extensions
 ```
 
 ### 2. 플러그인 개발
@@ -113,10 +113,10 @@ Sub-agent의 전문 분야와 작업 방식을 정의하는 시스템 프롬프�
 
 ```bash
 # 로컬 마켓플레이스 추가
-/plugin marketplace add file:///path/to/claude-code-marketplace
+/plugin marketplace add file:///path/to/ai-agent-extensions
 
 # 플러그인 설치
-/plugin install your-plugin@claude-code-marketplace
+/plugin install your-plugin@ai-agent-extensions
 
 # 동작 확인
 /your-command  # Command의 경우

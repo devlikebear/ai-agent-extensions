@@ -1,13 +1,13 @@
 {
-  "name": "claude-code-marketplace",
+  "name": "ai-agent-extensions",
   "version": "1.5.0",
-  "description": "커뮤니티 기반 Claude Code 플러그인 마켓플레이스 - 9개 플러그인 제공",
+  "description": "AI Agent Extensions for Claude Code - 9개 플러그인 및 스킬 제공",
   "author": {
     "name": "devlikebear@gmail.com",
     "url": "https://github.com/devlikebear"
   },
-  "homepage": "https://github.com/devlikebear/claude-code-marketplace",
-  "repository": "https://github.com/devlikebear/claude-code-marketplace",
+  "homepage": "https://github.com/devlikebear/ai-agent-extensions",
+  "repository": "https://github.com/devlikebear/ai-agent-extensions",
   "license": "MIT",
   "keywords": [
     "claude-code",
